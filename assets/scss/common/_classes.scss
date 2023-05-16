@@ -49,7 +49,7 @@
 
   font-size: 1.125rem;
 
-  @include sm-min {
+  @include sm {
     min-width: 350px;
   }
   @include sm {

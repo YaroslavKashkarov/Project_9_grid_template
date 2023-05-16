@@ -193,8 +193,6 @@ html {
 body {
   color: #637588;
   background-color: #ffffff;
-
-  scrollbar-width: none;
 }
 
 h1 {
@@ -926,9 +924,6 @@ p {
   font-weight: 700;
 }
 @media (min-width: 576px) {
-  .btn--primary {
-    min-width: 350px;
-  }
   .skills {
     padding: 10px;
   }
@@ -1140,7 +1135,13 @@ p {
     font-size: 1.5rem;
   }
   .btn--primary {
+    min-width: 350px;
+  }
+  .btn--primary {
     width: 100%;
+  }
+  .header-content__title {
+    margin: 0 0 33px;
   }
   .header-content__actions {
     -webkit-box-align: center;
@@ -1165,7 +1166,7 @@ p {
     padding: 20px;
   }
   .skills__container {
-    gap: 10px;
+    gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
 }
