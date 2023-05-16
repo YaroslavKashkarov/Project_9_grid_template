@@ -1,12 +1,12 @@
-@use "../../presets" as *;
-@use "../../mixins" as *;
+@use '../../presets' as *;
+@use '../../mixins' as *;
 
 .header-navbar {
   &__btn {
     position: relative;
 
     width: 30px;
-    height: 22.5px;
+    height: 23px;
     margin-left: auto;
 
     cursor: pointer;
@@ -54,8 +54,8 @@
 
     &.-active span {
       &:nth-child(1) {
-        top: -1.5px;
-        left: 4px;
+        top: -1.4px;
+        left: 5px;
 
         transform: rotate(45deg);
       }

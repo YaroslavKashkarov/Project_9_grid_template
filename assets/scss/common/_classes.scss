@@ -1,5 +1,5 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .btn {
   display: flex;
@@ -49,8 +49,8 @@
 
   font-size: 1.125rem;
 
-  @include sm {
-    min-width: 350px;
+  @include sm-min {
+    width: 350px;
   }
   @include sm {
     width: 100%;
