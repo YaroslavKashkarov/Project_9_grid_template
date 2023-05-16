@@ -1,13 +1,16 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 0.5em 1em;
+
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
+
   border-width: 2px;
   border-style: solid;
   border-color: $color-white;
@@ -25,14 +28,13 @@
   @include lg-min {
     min-width: 250px;
     min-height: 60px;
+
     font-size: 1.125rem;
   }
-
   @include lg-md {
     min-width: 200px;
     min-height: 50px;
   }
-
   @include md {
     min-width: 170px;
     min-height: 40px;
@@ -41,13 +43,15 @@
 
 .btn--primary {
   min-height: 60px;
+
   border-color: $color-primary;
   background-color: rgba($color-primary, 0.8);
+
   font-size: 1.125rem;
+
   @include sm-min {
     min-width: 350px;
   }
-
   @include sm {
     width: 100%;
   }
@@ -55,13 +59,18 @@
 
 .visually-hidden {
   position: absolute;
+
   overflow: hidden;
   clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
+
   white-space: nowrap;
+
   border: 0;
+
   clip-path: inset(100%);
 }
