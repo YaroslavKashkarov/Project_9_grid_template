@@ -6,6 +6,7 @@
 
   list-style: none;
 }
+
 @mixin visually-hidden {
   position: absolute;
 
@@ -30,4 +31,23 @@
 
 @mixin box-shadow {
   box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);
+}
+
+@mixin text-shortener {
+  display: block;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin bg-color($a: 0, $rgb: 0) {
+  background: rgba($rgb, $rgb, $rgb, $a);
+}
+
+@mixin block-header {
+  margin: 0;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid $color-dark;
 }

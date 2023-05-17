@@ -18,6 +18,9 @@
     @include md-sm {
       margin: 0 0 33px;
     }
+    @include sm {
+      margin: 0 0 33px;
+    }
   }
 
   &__actions {

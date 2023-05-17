@@ -1,0 +1,125 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.posts {
+  @include lg-min {
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
+  }
+  @include lg-md {
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
+  }
+  @include md {
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+
+    padding-bottom: $gap;
+
+    gap: $gap;
+    @include lg-min {
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.post-item {
+  &__image {
+    display: flex;
+    overflow: hidden;
+    align-content: center;
+
+    background-color: $color-primary;
+
+    img {
+      width: 100%;
+
+      transition: transform 0.5s;
+
+      object-fit: cover;
+    }
+  }
+
+  &__link {
+    display: grid;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    grid-template-rows: 300px 1fr;
+
+    &:hover .post-item {
+      &__image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      &__caption {
+        background-color: $color-posts-accent;
+        h3,
+        p {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    display: grid;
+    align-content: center;
+
+    padding: $gap;
+
+    transition: background-color 0.5s;
+
+    background-color: $color-posts;
+
+    h3 {
+      font-family: $font-header;
+      font-weight: 700;
+    }
+
+    p {
+      transition: color 0.5s;
+      text-align: center;
+
+      color: $color-gray;
+    }
+  }
+  &__title {
+    font-family: $font-header;
+    font-weight: 700;
+  }
+}
+
+@for $i from 1 through 6 {
+  .post-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}

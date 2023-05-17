@@ -1,11 +1,13 @@
 @use "../../libs/normalize.css/normalize";
 
+@use "mixins";
+
+@use "presets";
+
 @use "common";
+
 @use "components/header";
-@use "components/skills";
 
-// @use 'components/sections/section-about';
-// @use 'components/sections/section-form';
-// @use 'components/sections/section-posts';
+@use "components/sections";
 
-// @use 'components/footer/footer';
+@use "components/footer";
